@@ -1,1 +1,11 @@
 -  __dirname gives path to the directory that the current file is in.
+
+- With template engines we can make reusable markups instead of repeating the code.
+
+- handlebar (hbs) is a template engine which expects all of our views to be in a folder named "view"
+
+- To serve the static content put the resources in "public" directory.
+
+- res.render() is used to render our views
+
+- By default nodemon listens to changes only in the js files, to include other files use the -e flag with file extensions (ex: nodemon app.js -e js,hbs)
