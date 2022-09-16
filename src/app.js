@@ -46,8 +46,20 @@ app.get("/weather", (req, res) => {
   });
 });
 
+app.get("/help/*", (req, res) => {
+  res.render("404", {
+    title: "Error 404",
+    message: "Help article not found.",
+    name: "Mayank Vats",
+  });
+});
+
 app.get("*", (req, res) => {
-  res.send("Error: 404");
+  res.render("404", {
+    title: "Error 404",
+    message: "Page cannot be found.",
+    name: "Mayank Vats",
+  });
 });
 
 app.listen(3000, () => {
