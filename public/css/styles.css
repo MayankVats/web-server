@@ -41,3 +41,35 @@ header a {
 .portrait {
   width: 250px;
 }
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  padding: 8px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  border: 1px solid #888;
+  padding: 8px;
+  background-color: #888;
+  color: #fff;
+}
+
+button:focus {
+  outline: none;
+}
