@@ -14,21 +14,19 @@ weatherForm.addEventListener("submit", (e) => {
   errorMessage.textContent = "";
   loader.textContent = "Loading ...";
 
-  fetch(`http://localhost:3000/weather?address=${location}`).then(
-    (response) => {
-      response.json().then((data) => {
-        loader.textContent = "";
+  fetch(`/weather?address=${location}`).then((response) => {
+    response.json().then((data) => {
+      loader.textContent = "";
 
-        if (data.error) {
-          console.log(data.error);
-          successMessage.textContent = "";
-          errorMessage.textContent = data.error;
-        } else {
-          console.log(data);
-          errorMessage.textContent = "";
-          successMessage.textContent = `Current temperature in ${data.location} is ${data.temperature} degrees. It feels like ${data.feelsLike} degrees.`;
-        }
-      });
-    }
-  );
+      if (data.error) {
+        console.log(data.error);
+        successMessage.textContent = "";
+        errorMessage.textContent = data.error;
+      } else {
+        console.log(data);
+        errorMessage.textContent = "";
+        successMessage.textContent = `Current temperature in ${data.location} is ${data.temperature} degrees. It feels like ${data.feelsLike} degrees.`;
+      }
+    });
+  });
 });
