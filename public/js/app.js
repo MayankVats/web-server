@@ -25,7 +25,8 @@ weatherForm.addEventListener("submit", (e) => {
       } else {
         console.log(data);
         errorMessage.textContent = "";
-        successMessage.textContent = `Current temperature in ${data.location} is ${data.temperature} degrees. It feels like ${data.feelsLike} degrees.`;
+        successMessage.textContent = `Current temperature in ${data.location} is ${data.temperature} degrees. It feels like ${data.feelsLike} degrees.
+        Observed at ${data.observationTime}`;
       }
     });
   });

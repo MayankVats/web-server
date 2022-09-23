@@ -13,14 +13,18 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       const data = response.body;
 
+      console.log(data);
+
       const temperature = data.current.temperature;
       const precip = data.current.precip;
       const feelsLike = data.current.feelslike;
+      const observationTime = data.current.observation_time;
 
       callback(undefined, {
         temperature,
         precip,
         feelsLike,
+        observationTime,
       });
     }
   });
